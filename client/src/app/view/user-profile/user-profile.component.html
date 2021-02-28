@@ -1,0 +1,78 @@
+
+<div class="body container-fluid py-1 py-md-5">
+
+  <div class="row col-sm-10 mx-auto profile-body">
+      <div class="row px-auto py-2" style="text-align: center;">
+          <div class="col-md-4 mt-md-3">
+              <img [src]="transform()" class="img-circle img-responsive">
+              <form accept="image/x-png,image/jpeg" method="post" enctype="multipart/form-data" action="/attachment">
+                  <div id="center">
+                      <input hidden type="file" #profileInput name="attachment" (change)="uploadFile($event)" multiple>
+                  </div>
+              </form>
+
+              <p class="my-2 mx-auto px-2 px-sm-4" id="btn" (click)="profileInput.click()">Set Profile</p>
+          </div>
+          
+          <div class="col-md-8">
+              <div class="row m-md-4" id="title-name">
+                  <p style=" color: rgb(61, 61, 61);">{{user.firstName | titlecase}} {{user.lastName |
+                      titlecase}}</p>
+                  <hr style="width: fit-content;">
+              </div>
+          </div>
+      </div>
+
+   
+
+      <div class="row col-lg-9 ml-lg-auto">
+          <div class="col-sm-10 mx-auto px-md-3">
+              <div id="profile-details" class="m-sm-2 ">
+                  <table class="table">
+                      <tr>
+                          <th>First Name </th>
+                          <td>:</td>
+                          <td>{{user.firstName}}</td>
+                      </tr>
+                      <tr>
+                          <th>Last Name </th>
+                          <td>:</td>
+                          <td>{{user.lastName}}</td>
+                      </tr>
+                      <tr>
+                          <th>Username </th>
+                          <td>:</td>
+                          <td>{{user.username}}</td>
+                      </tr>
+                      <tr>
+                          <th>Email ID </th>
+                          <td>:</td>
+                          <td>{{user.emailId}}</td>
+                      </tr>
+                      <tr>
+                        <th>Phone No </th>
+                        <td>:</td>
+                        <td>{{user.phoneNo}}</td>
+                    </tr>
+                      
+                      <tr>
+                          <th>Date of Creation </th>
+                          <td>:</td>
+                          <td>{{user.createdDate | date:'mediumDate'}}</td>
+                      </tr>
+                  </table>
+              </div>
+          </div>
+          <div class="row mb-2 mb-sm-5">
+              
+              <button mat-raised-button color="primary" style="width: 140px;" class="ml-auto" (click)="openEditProfile()">Edit Profile</button>
+
+          </div>
+      </div>
+
+  </div>
+
+  <br>
+  <button mat-raised-button color="primary" float="centre"  style="width: 240px ;  height: 70px; margin-left: 600px"  (click)="deleteUser()">Delete user</button>
+  <button mat-raised-button color="primary"  style="width: 240px ;  height: 70px; margin-left: 100px;"  (click)="logout()">LogOut</button>
+</div>

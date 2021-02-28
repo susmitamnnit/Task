@@ -1,0 +1,70 @@
+.profile-body {
+    background-color: rgba(255, 255, 255);
+    /* background: transparent; */
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px 1px;
+}
+#btn {
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    border-style: dashed;
+    width: fit-content;
+    font-size: 90%;
+}
+#btn:hover {
+    background-color: black;
+    color: white;
+}
+.edit-btn {
+    width: fit-content;
+}
+#title-name {
+    text-align: left;
+}
+table { width: 90%;}
+p {
+    font-size: 50px;
+    font-weight: bolder;
+}
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+@media only screen and (max-width : 1450px) {
+    img { width: 170px;}
+}
+@media only screen and (max-width: 900px) {
+    img { width: 100px;}
+    #title-name { text-align: center;}
+    p{
+        font-size: 32px;
+    }
+    th {
+        font-size: 17px;
+    }
+    td {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #title-name { text-align: center;}
+
+    table {
+        width: max-content;
+        box-sizing: border-box;
+        display: inline-table;
+    }
+    p{
+        font-size: 22px;
+    }
+    th {
+        font-size: 13px;
+    }
+    td {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width : 390px) { table { margin-left: -30px;}}

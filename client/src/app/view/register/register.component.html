@@ -1,0 +1,64 @@
+
+<div class="container-fluid">
+  
+  <div class="login-box">
+      <h3 style="color: black; font-weight: 600; margin-bottom: 10px;">Register</h3>
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+          <div>
+              <div class="group">
+                  <input type="text" style="text-align: left;" name="firstName" placeholder=" First Name"
+                      #firstName="ngModel" [(ngModel)]="firstNameText" required>
+              </div>
+              <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+                  <div *ngIf="firstName.errors.required" class="alert">First Name is required</div>
+              </div>
+              <div class="group">
+                  <input type="text" style="text-align: left;" name="lastName" placeholder="Last Name"
+                      #lastName="ngModel" [(ngModel)]="lastNameText" required>
+              </div>
+              <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+                  <div *ngIf="lastName.errors.required" class="alert">Last Name is required</div>
+              </div>
+              <div class="group">
+                <input type="text" style="text-align: left;" name="username" placeholder="User Name"
+                    #username="ngModel" [(ngModel)]="usernameText" required>
+            </div>
+            <div *ngIf="username.invalid && (username.dirty || username.touched)">
+                <div *ngIf="username.errors.required" class="alert">User Name is required</div>
+            </div>
+              <div class="group">
+                  <input type="email" style="text-align: left;" name="Email" placeholder=" Email"
+                      #Email="ngModel" [(ngModel)]="EmailText" email required>
+              </div>
+              <div *ngIf="Email.invalid && (Email.dirty || Email.touched)">
+                  <div *ngIf="Email.errors.required" class="alert">Email ID is required</div>
+              </div>
+              
+              
+              
+              <div class="group">
+                  <input type="text" name="phone"
+                      placeholder="Enter phone No" #phone="ngModel" [(ngModel)]="phoneText"
+                      required>
+              </div>
+              <div *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+                  <div *ngIf="phone.errors.required" class="alert">phone No is required</div>
+              </div>
+             
+
+              <div class="group">
+                <input style="text-align: left;" name="password"
+                    placeholder="Enter password" #password="ngModel" [(ngModel)]="passwordText"
+                    required>
+            </div>
+            <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                <div *ngIf="password.errors.required" class="alert">password is required</div>
+            </div>
+              
+              <input type="submit" class="login_button" [disabled]="!userForm.valid" value="Submit">
+          </div>
+      </form>
+      <input type="submit" class="login_button" routerLink="/login" value="Back To Login">
+  </div>
+  
+</div>

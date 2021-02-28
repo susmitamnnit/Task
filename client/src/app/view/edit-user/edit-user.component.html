@@ -1,0 +1,41 @@
+
+<p>Edit your details here...</p>
+  <div id="dialog-box">
+    <form #form="ngForm">
+      <table class="table">
+        <tr>
+          <th>First Name </th>
+          <td>:</td>
+          <td><input class="form-control" [(ngModel)]="data.firstName" type="text" name="fname"></td>
+        </tr>
+        <tr>
+          <th>Last Name </th>
+          <td>:</td>
+          <td><input class="form-control" [(ngModel)]="data.lastName" type="text" name="lname"></td>
+        </tr>
+        <tr>
+          <th>Username </th>
+          <td>:</td>
+          <td><input class="form-control" [(ngModel)]="data.username" type="text" name=uname></td>
+        </tr>
+        <tr>
+          <th>Email ID </th>
+          <td>:</td>
+          <td><input class="form-control" [(ngModel)]="data.emailId" type="text" name=email></td>
+        </tr>
+        <tr>
+          <th>Phone No. </th>
+          <td>:</td>
+          <td>{{data.phoneNo}}</td>
+        </tr>
+        <tr>
+          <th>Date of Creation </th>
+          <td>:</td>
+          <td>{{data.createdDate | date:'mediumDate'}}</td>
+        </tr>
+      </table>
+      <br>
+      <button class="mr-3" mat-raised-button color="primary" (click)="onSave()">Save</button>
+      <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+    </form>
+ 

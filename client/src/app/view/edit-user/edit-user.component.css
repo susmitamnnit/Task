@@ -1,0 +1,59 @@
+input {
+    border: none;
+    /* border-bottom: 1px solid gray;
+    border-radius: 5px; */
+    /* height: 20px; */
+} 
+p {
+    font-size: 35px;
+    font-weight: bolder;
+}
+#dialog-box {
+    width: 1000px;
+}
+table {
+    width: 80%;
+    
+}
+
+@media only screen and (max-width: 900px) {
+    #dialog-box {
+        width: 600px;
+    }
+    table {
+        width: 90%;
+    }
+    p{
+        font-size: 24px;
+    }
+    th {
+        font-size: 15px;
+    }
+    td {
+        font-size: 15px;
+    }
+    td>input {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #dialog-box {
+        width: 300px;
+    }
+    table {
+        width: 90%;
+    }
+    p{
+        font-size: 20px;
+    }
+    th {
+        font-size: 12px;
+    }
+    td {
+        font-size: 12px;
+    }
+    td>input {
+        font-size: 12px;
+    }
+}
